@@ -20,7 +20,6 @@ class ReleaseTableViewController: UITableViewController {
         managedObjectContext = (appDelegate?.persistentContainer.viewContext)!
         super.init(coder: eDecoder)!
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
