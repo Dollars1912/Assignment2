@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */; };
 		18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F171EB431ED0027DE54 /* AppDelegate.swift */; };
-		18DF9F1A1EB431ED0027DE54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F191EB431ED0027DE54 /* ViewController.swift */; };
 		18DF9F1D1EB431ED0027DE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1B1EB431ED0027DE54 /* Main.storyboard */; };
 		18DF9F1F1EB431ED0027DE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */; };
 		18DF9F221EB431EE0027DE54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F201EB431EE0027DE54 /* LaunchScreen.storyboard */; };
@@ -38,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SneakerDetailViewController.swift; sourceTree = "<group>"; };
 		18DF9F141EB431ED0027DE54 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF9F171EB431ED0027DE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18DF9F191EB431ED0027DE54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18DF9F1C1EB431ED0027DE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DF9F211EB431EE0027DE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,13 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				18DF9F171EB431ED0027DE54 /* AppDelegate.swift */,
-				18DF9F191EB431ED0027DE54 /* ViewController.swift */,
 				18DF9F1B1EB431ED0027DE54 /* Main.storyboard */,
 				18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */,
 				18DF9F201EB431EE0027DE54 /* LaunchScreen.storyboard */,
 				18DF9F231EB431EE0027DE54 /* Info.plist */,
 				18DF9F451EB434990027DE54 /* ReleaseTableViewController.swift */,
 				18DF9F471EB4356F0027DE54 /* Model.xcdatamodeld */,
+				182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DF9F4D1EB436290027DE54 /* Sneaker+CoreDataProperties.swift in Sources */,
-				18DF9F1A1EB431ED0027DE54 /* ViewController.swift in Sources */,
+				182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */,
 				18DF9F4C1EB436290027DE54 /* Sneaker+CoreDataClass.swift in Sources */,
 				18DF9F461EB434990027DE54 /* ReleaseTableViewController.swift in Sources */,
 				18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */,
@@ -523,6 +523,7 @@
 				18DF9F3E1EB431EE0027DE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18DF9F3F1EB431EE0027DE54 /* Build configuration list for PBXNativeTarget "Assignment2Tests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +532,7 @@
 				18DF9F411EB431EE0027DE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18DF9F421EB431EE0027DE54 /* Build configuration list for PBXNativeTarget "Assignment2UITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +541,7 @@
 				18DF9F441EB431EE0027DE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
