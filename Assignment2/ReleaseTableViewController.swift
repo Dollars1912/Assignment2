@@ -10,18 +10,46 @@ import UIKit
 import Foundation
 import CoreData
 
-class ReleaseTableViewController: UITableViewController {
+class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var managedObjectContext: NSManagedObjectContext
     var sneakerList:[NSManagedObject] = []
+    var sneakerSearchList:[NSManagedObject] = []
+    var isSearching = false
     
     required init(coder eDecoder: NSCoder) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedObjectContext = (appDelegate?.persistentContainer.viewContext)!
         super.init(coder: eDecoder)!
     }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        isSearching = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        isSearching = false
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            isSearching = false
+        } else {
+            sneakerSearchList = sneakerList.filter{ value in
+                let sneaker = value as! Sneaker
+                return sneaker.name.lowercased().contains(searchText.lowercased())
+            }
+            isSearching = true
+            print("count \(sneakerSearchList.count)")
+        }
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchBar.delegate = self
 
         // read from db
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Sneaker")
@@ -81,12 +109,19 @@ class ReleaseTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sneakerList.count
+        if isSearching {
+            return sneakerSearchList.count
+        } else {
+            return sneakerList.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReleaseTableCell", for: indexPath)
-        let sneaker: Sneaker = self.sneakerList[indexPath.row] as! Sneaker
+        var sneaker: Sneaker = self.sneakerList[indexPath.row] as! Sneaker
+        if isSearching {
+            sneaker = self.sneakerSearchList[indexPath.row] as! Sneaker
+        }
         cell.textLabel?.text = "\(sneaker.name)"
         cell.detailTextLabel?.text = "\(sneaker.price)"
         return cell
@@ -97,7 +132,10 @@ class ReleaseTableViewController: UITableViewController {
             let destination: SneakerDetailViewController = segue.destination as! SneakerDetailViewController
             if let cell = sender as? UITableViewCell {
                 let indexPath = tableView.indexPath(for: cell)
-                let sneaker: Sneaker = sneakerList[indexPath!.row] as! Sneaker
+                var sneaker: Sneaker = sneakerList[indexPath!.row] as! Sneaker
+                if isSearching {
+                    sneaker = self.sneakerSearchList[indexPath!.row] as! Sneaker
+                }
                 destination.sneaker = sneaker
             }
         }
