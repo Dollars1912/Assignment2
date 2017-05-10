@@ -21,6 +21,7 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
     
     required init(coder eDecoder: NSCoder) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
         managedObjectContext = (appDelegate?.persistentContainer.viewContext)!
         super.init(coder: eDecoder)!
     }
@@ -50,7 +51,7 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchBar.delegate = self
-
+        
         // read from db
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Sneaker")
         do {
@@ -73,21 +74,49 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         sneaker.id = 1
         sneaker.release_date = formatter.date(from: "2016/10/08 22:31") as NSDate?
         sneaker.price = 220.0
-        sneaker.name = "nike"
+        sneaker.name = "NIKE AIR X SUPREME"
         sneakerList.append(sneaker)
         
         sneaker = Sneaker(context: managedObjectContext)
         sneaker.id = 2
         sneaker.release_date = formatter.date(from: "2016/12/08 22:31") as NSDate?
         sneaker.price = 120.0
-        sneaker.name = "puma"
+        sneaker.name = "ADIDAS X WHITE MOUNTAINEERING NMD"
         sneakerList.append(sneaker)
         
         sneaker = Sneaker(context: managedObjectContext)
         sneaker.id = 3
         sneaker.release_date = formatter.date(from: "2016/11/08 22:31") as NSDate?
         sneaker.price = 320.0
-        sneaker.name = "adidas"
+        sneaker.name = "ADIDAS YEEZY BOOST 350 V2"
+        sneakerList.append(sneaker)
+        
+        sneaker = Sneaker(context: managedObjectContext)
+        sneaker.id = 4
+        sneaker.release_date = formatter.date(from: "2016/12/08 22:31") as NSDate?
+        sneaker.price = 420.0
+        sneaker.name = "NEW BALANCE MRL420DA "
+        sneakerList.append(sneaker)
+        
+        sneaker = Sneaker(context: managedObjectContext)
+        sneaker.id = 5
+        sneaker.release_date = formatter.date(from: "2016/12/08 22:31") as NSDate?
+        sneaker.price = 420.0
+        sneaker.name = "ADIDAS INIKI RUNNER"
+        sneakerList.append(sneaker)
+        
+        sneaker = Sneaker(context: managedObjectContext)
+        sneaker.id = 6
+        sneaker.release_date = formatter.date(from: "2016/12/08 22:31") as NSDate?
+        sneaker.price = 420.0
+        sneaker.name = "VALENTINO TONAL ROCKRUNNER"
+        sneakerList.append(sneaker)
+        
+        sneaker = Sneaker(context: managedObjectContext)
+        sneaker.id = 7
+        sneaker.release_date = formatter.date(from: "2016/12/08 22:31") as NSDate?
+        sneaker.price = 420.0
+        sneaker.name = "REEBOK CLUB WORKOUT"
         sneakerList.append(sneaker)
         // save to db
         do {

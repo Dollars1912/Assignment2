@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */; };
+		1861DFB81EC3385400B309DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861DFB71EC3385400B309DD /* Default-568h@2x.png */; };
 		18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F171EB431ED0027DE54 /* AppDelegate.swift */; };
 		18DF9F1D1EB431ED0027DE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1B1EB431ED0027DE54 /* Main.storyboard */; };
 		18DF9F1F1EB431ED0027DE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SneakerDetailViewController.swift; sourceTree = "<group>"; };
+		1861DFB71EC3385400B309DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		18DF9F141EB431ED0027DE54 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF9F171EB431ED0027DE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DF9F1C1EB431ED0027DE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		18DF9F0B1EB431ED0027DE54 = {
 			isa = PBXGroup;
 			children = (
+				1861DFB71EC3385400B309DD /* Default-568h@2x.png */,
 				18DF9F4A1EB436290027DE54 /* Sneaker+CoreDataClass.swift */,
 				18DF9F4B1EB436290027DE54 /* Sneaker+CoreDataProperties.swift */,
 				18DF9F161EB431ED0027DE54 /* Assignment2 */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DF9F221EB431EE0027DE54 /* LaunchScreen.storyboard in Resources */,
+				1861DFB81EC3385400B309DD /* Default-568h@2x.png in Resources */,
 				18DF9F1F1EB431ED0027DE54 /* Assets.xcassets in Resources */,
 				18DF9F1D1EB431ED0027DE54 /* Main.storyboard in Resources */,
 			);
