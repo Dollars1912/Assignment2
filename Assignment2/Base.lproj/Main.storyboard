@@ -65,27 +65,16 @@
                             <outlet property="delegate" destination="Pbc-yx-B2E" id="Izf-R4-Efq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Clf-RT-cWC">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="dzZ-0m-9II">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Quk-2p-Qam">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="M81-7t-5Sc" kind="show" id="LIh-Tg-wye"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Clf-RT-cWC"/>
                     <connections>
                         <outlet property="searchBar" destination="e9A-R5-3bW" id="AzY-Y9-FTE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZX-XN-2u0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176.8" y="8.5457271364317844"/>
+            <point key="canvasLocation" x="1177" y="9"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Brand-->
         <scene sceneID="FEc-C1-NYv">
             <objects>
                 <tableViewController id="Cwo-cc-uGC" sceneMemberID="viewController">
@@ -108,39 +97,11 @@
                             <outlet property="delegate" destination="Cwo-cc-uGC" id="wS0-S9-w8L"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fnj-jx-wkT"/>
+                    <navigationItem key="navigationItem" title="Brand" id="fnj-jx-wkT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHG-6M-CjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="342" y="1484"/>
-        </scene>
-        <!--Top Button Table View Controller-->
-        <scene sceneID="mQN-QQ-AaZ">
-            <objects>
-                <tableViewController id="M81-7t-5Sc" userLabel="Top Button Table View Controller" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" id="bZv-hj-2h6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="QEC-7W-ZP6">
-                                <rect key="frame" x="0.0" y="28" width="375" height="117"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QEC-7W-ZP6" id="w40-lk-Qbr">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="M81-7t-5Sc" id="xxO-y9-nmV"/>
-                            <outlet property="delegate" destination="M81-7t-5Sc" id="p4z-0C-jSB"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Swv-Vm-6VM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1177" y="763"/>
         </scene>
         <!--Sneaker Detail View Controller-->
         <scene sceneID="4rw-Q5-Wf8">
@@ -162,7 +123,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swv-XX-WR4" userLabel="sneakerName">
                                 <rect key="frame" x="-26" y="90" width="375" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -223,7 +184,7 @@
             </objects>
             <point key="canvasLocation" x="-468" y="9.4452773613193415"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Favorites-->
         <scene sceneID="J9T-1Z-D8F">
             <objects>
                 <tableViewController id="99G-B0-eGn" sceneMemberID="viewController">
@@ -246,7 +207,7 @@
                             <outlet property="delegate" destination="99G-B0-eGn" id="Dkf-15-hZG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WU1-y6-V97"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="WU1-y6-V97"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHO-Bd-jOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
