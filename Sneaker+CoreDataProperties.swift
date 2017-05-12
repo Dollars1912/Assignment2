@@ -21,5 +21,6 @@ extension Sneaker {
     @NSManaged public var release_date: NSDate?
     @NSManaged public var price: Float
     @NSManaged public var name: String
+    @NSManaged public var detail: String
 
 }
