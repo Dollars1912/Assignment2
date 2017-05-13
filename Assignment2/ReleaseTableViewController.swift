@@ -158,7 +158,51 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true;
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let favorite = UITableViewRowAction(style: .normal, title: "Favorite") { action, index in
+            self.onFavoriteButtonClicked(Index: index.row)
+        }
+        favorite.backgroundColor = .orange
+        
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            self.onDeleteButtonClicked(Index: index.row)
+            
+        }
+        delete.backgroundColor = .red
+        return [delete, favorite]
+    }
+    
+    func onDeleteButtonClicked(Index index: Int) {
+        print("delete button tapped \(index)")
+        var sneaker = sneakerList[index]
+        if isSearching {
+            sneaker = sneakerSearchList[index]
+        }
+        // TODO delete
+    }
+    
+    func onFavoriteButtonClicked(Index index: Int) {
+        print("favourite button tapped \(index)")
+        var sneaker = sneakerList[index]
+        if isSearching {
+            sneaker = sneakerSearchList[index]
+        }
+        let favoriteSneaker = Favorite(context: managedObjectContext)
+        favoriteSneaker.time = NSDate.init()
+        favoriteSneaker.sneaker = sneaker as? Sneaker
+        // save to db
+        do {
+            try self.managedObjectContext.save()
+        } catch let error {
+            print("Could not save: \(error)")
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -179,7 +223,9 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         if isSearching {
             sneaker = self.sneakerSearchList[indexPath.row] as! Sneaker
         }
-        cell.textLabel?.text = "\(sneaker.name)"
+        if let sneakerName = sneaker.name {
+            cell.textLabel?.text = "\(sneakerName)"
+        }
         cell.detailTextLabel?.text = "\(sneaker.price)"
         return cell
     }

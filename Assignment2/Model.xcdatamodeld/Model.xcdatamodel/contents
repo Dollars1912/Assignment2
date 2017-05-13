@@ -5,6 +5,11 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="sneaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sneaker" inverseName="brand" inverseEntity="Sneaker" syncable="YES"/>
     </entity>
+    <entity name="Favorite" representedClassName=".Favorite" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="sneaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sneaker" inverseName="favorite" inverseEntity="Sneaker" syncable="YES"/>
+    </entity>
     <entity name="Sneaker" representedClassName=".Sneaker" syncable="YES">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -12,9 +17,11 @@
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="release_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="brand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brand" inverseName="sneaker" inverseEntity="Brand" syncable="YES"/>
+        <relationship name="favorite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Favorite" inverseName="sneaker" inverseEntity="Favorite" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Sneaker" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="Brand" positionX="241" positionY="18" width="128" height="88"/>
+        <element name="Sneaker" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Brand" positionX="135" positionY="27" width="128" height="88"/>
+        <element name="Favorite" positionX="-2" positionY="189" width="128" height="88"/>
     </elements>
 </model>
