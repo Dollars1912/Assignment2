@@ -26,10 +26,6 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         super.init(coder: eDecoder)!
     }
     
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        isSearching = true
-    }
-    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         isSearching = false
     }
@@ -43,7 +39,6 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
                 return sneaker.name.lowercased().contains(searchText.lowercased())
             }
             isSearching = true
-            print("count \(sneakerSearchList.count)")
         }
         tableView.reloadData()
     }
