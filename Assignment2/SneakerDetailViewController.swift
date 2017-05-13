@@ -21,8 +21,6 @@ class SneakerDetailViewController: UIViewController {
             sneakerNameLabel.text = sneaker!.name
             priceLabel.text = "\(sneaker!.price)"
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181924C91EC6D34600F06A7F /* Brand+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181924C71EC6D34600F06A7F /* Brand+CoreDataClass.swift */; };
+		181924CA1EC6D34600F06A7F /* Brand+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181924C81EC6D34600F06A7F /* Brand+CoreDataProperties.swift */; };
 		182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */; };
 		1861DFBA1EC47AB200B309DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861DFB91EC47AB200B309DD /* Default-568h@2x.png */; };
 		18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F171EB431ED0027DE54 /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181924C71EC6D34600F06A7F /* Brand+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Brand+CoreDataClass.swift"; sourceTree = "<group>"; };
+		181924C81EC6D34600F06A7F /* Brand+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Brand+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SneakerDetailViewController.swift; sourceTree = "<group>"; };
 		1861DFB91EC47AB200B309DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		18DF9F141EB431ED0027DE54 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +91,8 @@
 		18DF9F0B1EB431ED0027DE54 = {
 			isa = PBXGroup;
 			children = (
+				181924C71EC6D34600F06A7F /* Brand+CoreDataClass.swift */,
+				181924C81EC6D34600F06A7F /* Brand+CoreDataProperties.swift */,
 				1861DFB91EC47AB200B309DD /* Default-568h@2x.png */,
 				18DF9F4A1EB436290027DE54 /* Sneaker+CoreDataClass.swift */,
 				18DF9F4B1EB436290027DE54 /* Sneaker+CoreDataProperties.swift */,
@@ -278,7 +284,9 @@
 				18DF9F4D1EB436290027DE54 /* Sneaker+CoreDataProperties.swift in Sources */,
 				182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */,
 				18DF9F4C1EB436290027DE54 /* Sneaker+CoreDataClass.swift in Sources */,
+				181924CA1EC6D34600F06A7F /* Brand+CoreDataProperties.swift in Sources */,
 				18DF9F461EB434990027DE54 /* ReleaseTableViewController.swift in Sources */,
+				181924C91EC6D34600F06A7F /* Brand+CoreDataClass.swift in Sources */,
 				18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */,
 				18DF9F491EB4356F0027DE54 /* Model.xcdatamodeld in Sources */,
 			);

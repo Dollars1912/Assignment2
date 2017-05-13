@@ -36,7 +36,7 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         } else {
             sneakerSearchList = sneakerList.filter{ value in
                 let sneaker = value as! Sneaker
-                return sneaker.name.lowercased().contains(searchText.lowercased())
+                return sneaker.name!.lowercased().contains(searchText.lowercased())
             }
             isSearching = true
         }
