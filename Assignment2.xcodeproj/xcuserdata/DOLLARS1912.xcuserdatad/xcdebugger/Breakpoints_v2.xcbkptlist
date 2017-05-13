@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
             endingLineNumber = "144"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkName = "loadFromDatabase()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
