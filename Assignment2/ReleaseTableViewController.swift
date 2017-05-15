@@ -10,6 +10,20 @@ import UIKit
 import Foundation
 import CoreData
 
+//extension UIImage{
+//    class func sacleImageToSize(img: UIImage, size: CGSize) -> UIImage{
+//        UIGraphicsBeginImageContext(size)
+//        
+//        img.drawInRect( CGRect(origin: CGPointZero, size: size))
+//        
+//        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+//        
+//        UIGraphicsEndImageContext()
+//        
+//        return scaledImage!
+//    }
+//}
+
 class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -227,6 +241,9 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
             cell.textLabel?.text = "\(sneakerName)"
         }
         cell.detailTextLabel?.text = "\(sneaker.price)"
+        
+        let imageName = "\(sneaker.id)"
+        cell.imageView?.image = UIImage(named:"\(imageName)")
         return cell
     }
 
