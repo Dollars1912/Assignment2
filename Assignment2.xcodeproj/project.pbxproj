@@ -24,6 +24,12 @@
 		18DF9F491EB4356F0027DE54 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F471EB4356F0027DE54 /* Model.xcdatamodeld */; };
 		18DF9F4C1EB436290027DE54 /* Sneaker+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F4A1EB436290027DE54 /* Sneaker+CoreDataClass.swift */; };
 		18DF9F4D1EB436290027DE54 /* Sneaker+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F4B1EB436290027DE54 /* Sneaker+CoreDataProperties.swift */; };
+		D2332FCE1ECCA4B2000F159A /* brandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2332FCD1ECCA4B2000F159A /* brandTableViewController.swift */; };
+		D2332FD01ECCA4EF000F159A /* nikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2332FCF1ECCA4EF000F159A /* nikeTableViewController.swift */; };
+		D2332FD21ECCA52C000F159A /* pumaableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2332FD11ECCA52C000F159A /* pumaableViewController.swift */; };
+		D2332FD41ECCA541000F159A /* newbalanceableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2332FD31ECCA541000F159A /* newbalanceableViewController.swift */; };
+		D2332FD61ECCA562000F159A /* adidasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2332FD51ECCA562000F159A /* adidasTableViewController.swift */; };
+		D2332FD81ECCA572000F159A /* vansableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2332FD71ECCA572000F159A /* vansableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,12 @@
 		18DF9F481EB4356F0027DE54 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		18DF9F4A1EB436290027DE54 /* Sneaker+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sneaker+CoreDataClass.swift"; sourceTree = "<group>"; };
 		18DF9F4B1EB436290027DE54 /* Sneaker+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sneaker+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D2332FCD1ECCA4B2000F159A /* brandTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = brandTableViewController.swift; sourceTree = "<group>"; };
+		D2332FCF1ECCA4EF000F159A /* nikeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nikeTableViewController.swift; sourceTree = "<group>"; };
+		D2332FD11ECCA52C000F159A /* pumaableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pumaableViewController.swift; sourceTree = "<group>"; };
+		D2332FD31ECCA541000F159A /* newbalanceableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newbalanceableViewController.swift; sourceTree = "<group>"; };
+		D2332FD51ECCA562000F159A /* adidasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adidasTableViewController.swift; sourceTree = "<group>"; };
+		D2332FD71ECCA572000F159A /* vansableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vansableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,12 @@
 				18DF9F451EB434990027DE54 /* ReleaseTableViewController.swift */,
 				18DF9F471EB4356F0027DE54 /* Model.xcdatamodeld */,
 				182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */,
+				D2332FCD1ECCA4B2000F159A /* brandTableViewController.swift */,
+				D2332FCF1ECCA4EF000F159A /* nikeTableViewController.swift */,
+				D2332FD11ECCA52C000F159A /* pumaableViewController.swift */,
+				D2332FD31ECCA541000F159A /* newbalanceableViewController.swift */,
+				D2332FD51ECCA562000F159A /* adidasTableViewController.swift */,
+				D2332FD71ECCA572000F159A /* vansableViewController.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -293,13 +311,19 @@
 			files = (
 				18DF9F4D1EB436290027DE54 /* Sneaker+CoreDataProperties.swift in Sources */,
 				181924D61EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift in Sources */,
+				D2332FD81ECCA572000F159A /* vansableViewController.swift in Sources */,
 				182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */,
 				18DF9F4C1EB436290027DE54 /* Sneaker+CoreDataClass.swift in Sources */,
 				181924CA1EC6D34600F06A7F /* Brand+CoreDataProperties.swift in Sources */,
+				D2332FCE1ECCA4B2000F159A /* brandTableViewController.swift in Sources */,
+				D2332FD01ECCA4EF000F159A /* nikeTableViewController.swift in Sources */,
 				181924D51EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift in Sources */,
 				18DF9F461EB434990027DE54 /* ReleaseTableViewController.swift in Sources */,
+				D2332FD21ECCA52C000F159A /* pumaableViewController.swift in Sources */,
 				181924C91EC6D34600F06A7F /* Brand+CoreDataClass.swift in Sources */,
+				D2332FD61ECCA562000F159A /* adidasTableViewController.swift in Sources */,
 				18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */,
+				D2332FD41ECCA541000F159A /* newbalanceableViewController.swift in Sources */,
 				18DF9F491EB4356F0027DE54 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Assignment2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = deakinLawrence.Assignment2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,6 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Assignment2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = deakinLawrence.Assignment2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -480,6 +506,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Assignment2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = deakinLawrence.Assignment2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,6 +521,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Assignment2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = deakinLawrence.Assignment2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
