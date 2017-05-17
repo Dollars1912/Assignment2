@@ -14,12 +14,14 @@ class SneakerDetailViewController: UIViewController {
     
     @IBOutlet weak var sneakerNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var detail: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if (sneaker != nil) {
             sneakerNameLabel.text = sneaker!.name
-            priceLabel.text = "\(sneaker!.price)"
+            priceLabel.text = "price(AUD):$\(sneaker!.price)"
+            detail.text = "\(sneaker!.detail)"
         }
     }
 
