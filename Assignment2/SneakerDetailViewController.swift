@@ -11,6 +11,7 @@ import UIKit
 class SneakerDetailViewController: UIViewController {
     var sneaker: Sneaker?
 
+    @IBOutlet var sneakerimage: UIImageView!
     @IBOutlet weak var sneakerNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var detail: UITextView!
@@ -21,6 +22,7 @@ class SneakerDetailViewController: UIViewController {
             sneakerNameLabel.text = sneaker!.name
             priceLabel.text = "price(AUD):$\(sneaker!.price)"
             detail.text = "\(sneaker!.detail)"
+            sneakerimage.image = UIImage(named:"\(sneaker!.id)")
         }
     }
 

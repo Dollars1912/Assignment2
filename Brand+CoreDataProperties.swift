@@ -20,5 +20,5 @@ extension Brand {
     @NSManaged public var name: String?
     @NSManaged public var detail: String
     @NSManaged public var release_date: NSDate?
-    @NSManaged public var price: Int32
+    @NSManaged public var price: Float
 }

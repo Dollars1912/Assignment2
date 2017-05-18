@@ -24,7 +24,7 @@ import AVFoundation
 //        return scaledImage!
 //    }
 //}
-//ssss
+
 
 class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
     
@@ -134,7 +134,6 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         sneaker = Sneaker(context: managedObjectContext)
         sneaker.id = 6
         sneaker.release_date = (formatter.date(from: "2017/04/03 ") as NSDate?)!
-        
         sneaker.price = 180.0
         sneaker.name = "Rehanna x Puma Creeper Cracked Leather"
         sneaker.detail = "The Rihanna x Puma Creeper is a popular shoe collaboration between Rihanna and Puma. They are a remixed version on the original Puma Suede. The most noticeable feature of the shoes are the extra thick soles inspired by the creeper silhouette popular during the punk rock era of the ’80s and ‘90s. Read below for further release details and price information. "
@@ -270,6 +269,7 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
                     sneaker = self.sneakerSearchList[indexPath!.row] as! Sneaker
                 }
                 destination.sneaker = sneaker
+              
             }
         }
     }

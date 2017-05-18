@@ -26,7 +26,7 @@ class adidasTableViewController: UITableViewController
     override func viewDidLoad() {
         
         // read from db
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Brand")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Brandadidas")
         do {
             let result = try self.managedObjectContext.fetch(fetchRequest)
             sneakerList = result
@@ -45,11 +45,12 @@ class adidasTableViewController: UITableViewController
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         var sneaker = Sneaker(context: managedObjectContext)
-        sneaker.id = 1
-        sneaker.release_date = (formatter.date(from: "2017/04/24") as NSDate?)!
-        sneaker.price = 220.0
-        sneaker.name = "NIKE AIR X SUPREME: SUPTEMPO"
-        sneaker.detail = "Supreme and \nNike are collaborating for the Air More Uptempo shoe, nicknamed the “Suptempo.”  \nThe Air More Uptempo was originally released in 1996 and is know for the word “AIR” in large letters on the shoe. Supreme's version includes the\n letters “SUP” in place of “AIR.” The shoe releases in three colorways of red/white, black, and metallic gold on April 27th, 2017 ($220), and \nreleases again on April 29th, 2017 ($220) via Nike. "
+        sneaker = Sneaker(context: managedObjectContext)
+        sneaker.id = 2
+        sneaker.release_date = (formatter.date(from: "2016/12/08") as NSDate?)!
+        sneaker.price = 120.0
+        sneaker.name = "NMD XR1 MMJ :Mastermind"
+        sneaker.detail = "How can adidas get people even more hyped on the NMD? Add some collaborations into the mix and keep their distribution limited to its top tier of Consortium retailers. That's the plan with this pair, the Mastermind x adidas NMD XR1. The shoe's design doesn't mess with the traditional Mastermind formula, using a no-frills black and white colorway and tossing in the Japanese brand's logos on the support cage.Also on the way from Mastermind is a collab take on the Tubular Instinct, a shoe that's no doubt less anticipated than its NMD."
         sneakerList.append(sneaker)
         
         
@@ -57,24 +58,13 @@ class adidasTableViewController: UITableViewController
         
         
         sneaker = Sneaker(context: managedObjectContext)
-        sneaker.id = 5
-        sneaker.release_date = (formatter.date(from: "2017/04/04") as NSDate?)!
-        sneaker.price = 180.0
-        sneaker.name = "Nike Air Max 97 Silver Bullet"
-        sneaker.detail = "The Nike Air Max 97 “Silver Bullet” is finally getting a general release in the US on April 13th, but before we all get a shot at the head-turning classic that was once an Italian staple, Nike Sportswear is dressing up a number of their other Air Max retros with the sought after Metallic Silver/Red combination to help ease the pain of missing out on the AM97. First we saw the Air Max 95 “Silver Bullet” featuring the patent leather look repurposed to fit the overall shape of the iconic AM95 and now another European staple will follow suit with the Nike Air Max Plus. The “Silver Bullet” colorway works rather well on the Air Max Plus given the aggressive side panel overlays and breathable mesh upper. The smaller side panel Swoosh even matches the overall size of the Air Max 97’s. We’re not sure when this women’s exclusive Air Max Plus Silver Bullet will be available, but head over to our Release Dates page for an updated look at all of Nike Sportswear’s latest offerings"
+        sneaker.id = 3
+        sneaker.release_date = (formatter.date(from: "2016/09/20") as NSDate?)!
+        sneaker.price = 500.0
+        sneaker.name = "ADIDAS YEEZY BOOST 350 V2 :Zebra"
+        sneaker.detail = "More official images are in for the coming Yeezy influx for February 2017.\n While we’re only a week away from the adidas Yeezy Boost 350 V2 Black Red, today we get a detailed look at the coming Yeezy Boost 350 V2 Zebra,\n nicknamed for its unique white and black striped Primeknit upper that contrasts the vibrant red ‘SPLY-350’ side panel branding.The Yeezy V2 Zebra\n is slated to release at global retailers on February 25th, 2017 for $220 USD and marks the second Yeezy Boost release of 2017. The swirling array of\n Primeknit stripes are accented by an updated heel tab, a slip-on upper, and a white side panel stripe while a TPU midsole covers the Boost cushioning\n system throughout."
         sneakerList.append(sneaker)
         
-        
-        
-        
-        
-        sneaker = Sneaker(context: managedObjectContext)
-        sneaker.id = 8
-        sneaker.release_date = (formatter.date(from: "2018/01/01") as NSDate?)!
-        sneaker.price = 230.0
-        sneaker.name = "Air Jordan 3:Black Cement"
-        sneaker.detail = "It seems like every year we hear a rumor about the Air Jordan 3 “Black Cement” returning with the coveted OG Nike Air branding on the heel in the near future. You can add 2018 to that ongoing tradition as rumors are swirling around the NBA All-Star Weekend playing host to one of the most iconic pairs of the Air Jordan 3 ever. The pair showcased here is a pair that Jordan Brand has used during pop-up displays dating back to 2013 and fits the whole remastered form given the premium black leather, traditional cement Elephant Print and of course, that Nike Air branding on the heel instead of the Jumpman logo that’s replaced the Swoosh in more recent years. It would make sense that the All-Star Weekend festivities would play host to the Jordan 3 Black Cement given the marquee event usually dropping some serious heat. 2018 also marks the 30th anniversary of the legendary creation from Tinker Hatfield. "
-        sneakerList.append(sneaker)
         
         
         
@@ -92,17 +82,17 @@ class adidasTableViewController: UITableViewController
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "niketable", for: indexPath) as! nike
+        let cell = tableView.dequeueReusableCell(withIdentifier: "adidastable", for: indexPath) as! adidas
         let sneaker: Sneaker = self.sneakerList[indexPath.row] as! Sneaker
         if let sneakerName = sneaker.name {
-            cell.nikename?.text = "\(sneakerName)"
+            cell.adidasname?.text = "\(sneakerName)"
         }
         if let release_date = sneaker.release_date {
-            cell.nikedate.text = "\(release_date)"
+            cell.adidasdate.text = "\(release_date)"
         }
-        cell.nikeprice.text = "AUD \(sneaker.price)"
+        cell.adidasprice.text = "AUD \(sneaker.price)"
         let imageName = "\(sneaker.id)"
-        cell.nikeimage?.image = UIImage(named:"\(imageName)")
+        cell.adidasimage?.image = UIImage(named:"\(imageName)")
         return cell
         
         

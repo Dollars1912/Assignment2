@@ -8,7 +8,8 @@ class nikeTableViewController: UITableViewController
     var managedObjectContext: NSManagedObjectContext
     var sneakerList:[NSManagedObject] = []
     var sneakerSearchList:[NSManagedObject] = []
-//    var imgs = [UIImage(named:"")]
+//    var imgs = [UIImage(named:"1"),UIImage(named:"5"),UIImage(named:"8")]
+//    var 
     required init(coder eDecoder: NSCoder) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
@@ -109,6 +110,6 @@ class nikeTableViewController: UITableViewController
             }
         }
     }
-    
+
     
 }
