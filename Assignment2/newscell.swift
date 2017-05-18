@@ -10,6 +10,12 @@ import UIKit
 
 class newscell: UITableViewCell {
 
+    
+    
+    @IBOutlet var newsimage: UIImageView!
+    @IBOutlet weak var newstitle: UILabel!
+    @IBAction func readmore(_ sender: UIButton) {
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

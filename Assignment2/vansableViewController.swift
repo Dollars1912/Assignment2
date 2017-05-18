@@ -16,7 +16,7 @@ class vansTableViewController: UITableViewController
     var managedObjectContext: NSManagedObjectContext
     var sneakerList:[NSManagedObject] = []
     var sneakerSearchList:[NSManagedObject] = []
-    //    var imgs = [UIImage(named:"")]
+    
     required init(coder eDecoder: NSCoder) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
@@ -49,9 +49,9 @@ class vansTableViewController: UITableViewController
         sneaker.id = 9
         sneaker.release_date = (formatter.date(from: "2017/05/13 ") as NSDate?)!
         sneaker.price = 200.0
-        sneaker.name = "PBlends, Vans, And Peanuts Celebrate 67 Years Of Snoopy & Co. :Bones"
+        sneaker.name = "PBlends, Vans, And Peanuts Celebrate 67 Years Of Snoopy & Co.:Bones"
         sneaker.detail = "Southern California’s own BLENDS continues to revamp some of your favorite archival Vans models with their signature ‘Bones’ side panel stripe and premium black leather and now the boutique is back to celebrate the 67th anniversary of Snoopy, Charlie Brown, and the entire Peanuts gang with an upcoming Vans Sk8-Hi Zip slated to release on Saturday, May 13th. The luxurious reissued take on the classic skate silhouette benefits from premium black leather throughout, an updated zipper backing, and an updated ‘Bones’ detail that features Snoopy’s signature lazy contemplative position atop his dog house. Woodstock even gets a subtle feature on the medial side for a nice added touch. Check out more detailed shots below and we’ll let you know where you can grab this pair besides BLENDS later in the week"
-        sneakerList.append(sneaker) 
+        sneakerList.append(sneaker)
         
         
         // save to db
