@@ -18,7 +18,7 @@ class nikeTableViewController: UITableViewController
     override func viewDidLoad() {
         
         // read from db
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Sneaker")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Brand")
         do {
             let result = try self.managedObjectContext.fetch(fetchRequest)
             sneakerList = result

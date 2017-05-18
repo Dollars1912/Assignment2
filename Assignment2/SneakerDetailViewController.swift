@@ -11,7 +11,6 @@ import UIKit
 class SneakerDetailViewController: UIViewController {
     var sneaker: Sneaker?
 
-    
     @IBOutlet weak var sneakerNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var detail: UITextView!
