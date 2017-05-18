@@ -107,3 +107,4 @@ class adidasTableViewController: UITableViewController
         
         
 }
+}
