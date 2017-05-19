@@ -27,28 +27,19 @@ class  utilities {
     static var freshnews :[sneakernews] = []
     static func loadnews() -> [sneakernews]{
         freshnews = [
-            sneakernews(img :UIImage(named: "1")!,title : "",button : "read  more",urls:"www.qq.com"),
-            sneakernews(img :UIImage(named: "2")!,title : "",button : "read  more",urls:"www.qq.com"),
-            sneakernews(img :UIImage(named: "3")!,title : "",button : "read  more",urls:"www.qq.com"),
-            sneakernews(img :UIImage(named: "4")!,title : "",button : "read  more",urls:"www.qq.com"),
-            sneakernews(img :UIImage(named: "5")!,title : "",button : "read  more",urls:"www.qq.com")
+            sneakernews(img :UIImage(named: "1")!,title : "",button : "read  more",urls:"https://www.youtube.com/watch?v=rcVv1N1hReQ"),
+            sneakernews(img :UIImage(named: "2")!,title : "",button : "read  more",urls:"https://www.qq.com"),
+            sneakernews(img :UIImage(named: "3")!,title : "",button : "read  more",urls:"https://www.qq.com"),
+            sneakernews(img :UIImage(named: "4")!,title : "",button : "read  more",urls:"https://www.qq.com"),
+            sneakernews(img :UIImage(named: "5")!,title : "",button : "read  more",urls:"https://www.qq.com")
         ]
         return freshnews
     }
 }
 class newTableViewController: UITableViewController {
-// var urls: NSMutableArray! = NSMutableArray()
     override func viewDidLoad() {
     super.viewDidLoad()
-//        self.urls.add("www.qq.com")
-//        self.urls.add("")
-//        self.urls.add("")
-//        self.urls.add("")
-//        self.urls.add("")
-//        self.urls.add("")
-        
-        
-    _ = utilities.loadnews()
+           utilities.loadnews()
     self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     
 }
@@ -73,6 +64,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
     let cell = tableView.dequeueReusableCell(withIdentifier: "newstable", for: indexPath) as! newscell
     cell.newsimage.image = utilities.freshnews[indexPath.row].newssimage
     cell.newstitle?.text = "\(utilities.freshnews[indexPath.row].newstitle)"
+    cell.readmore?.text = "\(utilities.freshnews[indexPath.row].newsbutton)"
 
  
 
@@ -84,18 +76,25 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
 
 
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier:"webbrows" , sender: Any?.self)
-    
-    
+//    let website = utilities.freshnews[indexPath.row].newsurls
+//   performSegue(withIdentifier:"webbrows" , sender:website)
     let urlString = utilities.freshnews[indexPath.row].newsurls
-    if let url = url(string: urlString)
+    if let url = URL(string: urlString)
     {
-        UIApplication.shared.openURL(url)
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
 }
-//    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//     if segue.identifier == "webbrows"{
+//        (segue.destination as! newsViewController.Sneakernews) = (sender as! sneaker )
+//        
+//        
+//        
+}
+
+//
+//
 //        var valueToPass = utilities.loadnews()
 //        var urlToPass = valueToPass[].newsurls
 //        if segue.identifier == "" {
@@ -107,7 +106,5 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
 //            }
 //        }
 //    }
-    
-        
-    }
+
 

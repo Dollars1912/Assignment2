@@ -24,7 +24,7 @@
 		18DF9F491EB4356F0027DE54 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F471EB4356F0027DE54 /* Model.xcdatamodeld */; };
 		18DF9F4C1EB436290027DE54 /* Sneaker+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F4A1EB436290027DE54 /* Sneaker+CoreDataClass.swift */; };
 		18DF9F4D1EB436290027DE54 /* Sneaker+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F4B1EB436290027DE54 /* Sneaker+CoreDataProperties.swift */; };
-		D2317F881ECED3B9004D376E /* newsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2317F871ECED3B9004D376E /* newsViewController.swift */; };
+		D2317F881ECED3B9004D376E /* onlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2317F871ECED3B9004D376E /* onlineViewController.swift */; };
 		D2317F8A1ECED8A5004D376E /* newTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2317F891ECED8A5004D376E /* newTableViewController.swift */; };
 		D2332FCE1ECCA4B2000F159A /* brandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2332FCD1ECCA4B2000F159A /* brandTableViewController.swift */; };
 		D2332FD21ECCA52C000F159A /* pumaableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2332FD11ECCA52C000F159A /* pumaableViewController.swift */; };
@@ -89,7 +89,7 @@
 		18DF9F481EB4356F0027DE54 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		18DF9F4A1EB436290027DE54 /* Sneaker+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sneaker+CoreDataClass.swift"; sourceTree = "<group>"; };
 		18DF9F4B1EB436290027DE54 /* Sneaker+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sneaker+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D2317F871ECED3B9004D376E /* newsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsViewController.swift; sourceTree = "<group>"; };
+		D2317F871ECED3B9004D376E /* onlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onlineViewController.swift; sourceTree = "<group>"; };
 		D2317F891ECED8A5004D376E /* newTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newTableViewController.swift; sourceTree = "<group>"; };
 		D2332FCD1ECCA4B2000F159A /* brandTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = brandTableViewController.swift; sourceTree = "<group>"; };
 		D2332FD11ECCA52C000F159A /* pumaableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pumaableViewController.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 				D2E652161ECE15B100C6BD8E /* NB.swift */,
 				D2E652181ECE15BC00C6BD8E /* vans.swift */,
 				D2E6521C1ECE1C8400C6BD8E /* newscell.swift */,
-				D2317F871ECED3B9004D376E /* newsViewController.swift */,
+				D2317F871ECED3B9004D376E /* onlineViewController.swift */,
 				D2317F891ECED8A5004D376E /* newTableViewController.swift */,
 			);
 			path = Assignment2;
@@ -385,7 +385,7 @@
 				D2332FD61ECCA562000F159A /* adidasTableViewController.swift in Sources */,
 				D2E6520E1ECE01BF00C6BD8E /* Brandadidas+CoreDataClass.swift in Sources */,
 				18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */,
-				D2317F881ECED3B9004D376E /* newsViewController.swift in Sources */,
+				D2317F881ECED3B9004D376E /* onlineViewController.swift in Sources */,
 				D2332FD41ECCA541000F159A /* newbalanceableViewController.swift in Sources */,
 				18DF9F491EB4356F0027DE54 /* Model.xcdatamodeld in Sources */,
 				D2E6520A1ECE01BF00C6BD8E /* Brandnb+CoreDataClass.swift in Sources */,

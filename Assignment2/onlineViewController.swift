@@ -11,15 +11,25 @@ import UIKit
 
 
 
-class newsViewController: UITableViewController {
+class newsViewController: UIViewController {
+
+    @IBOutlet var webnews: UIWebView!
+
+   
+//    func loadAdressURL(){
+//        let requestURL = NSURL(string:urlpath)
+//        let request = NSURLRequest(url: requestURL as! URL)
+//        webnews.loadRequest(request as URLRequest)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+       let urlpath = NSURL(string:"https://www.fly-kicks.com.au")
+        webnews.loadRequest(URLRequest(url: urlpath! as URL ))
+        
         
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
