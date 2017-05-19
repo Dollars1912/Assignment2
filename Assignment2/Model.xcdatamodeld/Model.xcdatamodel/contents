@@ -22,7 +22,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="release_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="sneaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brandnb" inverseName="sneaker" inverseEntity="Brandnb" syncable="YES"/>
+        <relationship name="sneaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sneaker" inverseName="brandnb" inverseEntity="Sneaker" syncable="YES"/>
     </entity>
     <entity name="Brandpuma" representedClassName=".Brandpuma" syncable="YES">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
@@ -53,7 +53,7 @@
         <attribute name="release_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="brand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brand" inverseName="sneaker" inverseEntity="Brand" syncable="YES"/>
         <relationship name="brandadidas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brandadidas" inverseName="sneaker" inverseEntity="Brandadidas" syncable="YES"/>
-        <relationship name="brandnb" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brandnb" syncable="YES"/>
+        <relationship name="brandnb" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brandnb" inverseName="sneaker" inverseEntity="Brandnb" syncable="YES"/>
         <relationship name="brandpuma" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brandpuma" inverseName="sneaker" inverseEntity="Brandpuma" syncable="YES"/>
         <relationship name="brandvans" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brandvans" inverseName="sneaker" inverseEntity="Brandvans" syncable="YES"/>
         <relationship name="favorite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Favorite" inverseName="sneaker" inverseEntity="Favorite" syncable="YES"/>
@@ -61,10 +61,10 @@
     <elements>
         <element name="Brand" positionX="135" positionY="27" width="128" height="135"/>
         <element name="Brandadidas" positionX="45" positionY="126" width="128" height="135"/>
+        <element name="Brandnb" positionX="36" positionY="108" width="128" height="135"/>
         <element name="Brandpuma" positionX="54" positionY="135" width="128" height="135"/>
         <element name="Brandvans" positionX="63" positionY="144" width="128" height="135"/>
         <element name="Favorite" positionX="-2" positionY="189" width="128" height="90"/>
         <element name="Sneaker" positionX="-63" positionY="-18" width="128" height="210"/>
-        <element name="Brandnb" positionX="36" positionY="108" width="128" height="135"/>
     </elements>
 </model>
