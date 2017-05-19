@@ -27,11 +27,11 @@ class  utilities {
     static var freshnews :[sneakernews] = []
     static func loadnews() -> [sneakernews]{
         freshnews = [
-            sneakernews(img :UIImage(named: "1")!,title : "",button : "read  more",urls:"https://www.youtube.com/watch?v=rcVv1N1hReQ"),
-            sneakernews(img :UIImage(named: "2")!,title : "",button : "read  more",urls:"https://www.qq.com"),
-            sneakernews(img :UIImage(named: "3")!,title : "",button : "read  more",urls:"https://www.qq.com"),
-            sneakernews(img :UIImage(named: "4")!,title : "",button : "read  more",urls:"https://www.qq.com"),
-            sneakernews(img :UIImage(named: "5")!,title : "",button : "read  more",urls:"https://www.qq.com")
+            sneakernews(img :UIImage(named: "news1")!,title : "The Air Jordan 5 “Camo” Releases September 2nd",button : "Read  more",urls:"https://sneakernews.com/2017/05/19/air-jordan-5-camo-release-date/"),
+            sneakernews(img :UIImage(named: "news2")!,title : "Preview All 11 adidas NMD Releases For Tomorrow",button : "Read  more",urls:"https://sneakernews.com/2017/05/19/adidas-nmd-may-20-2017-release-dates/"),
+            sneakernews(img :UIImage(named: "news3")!,title : "The Nike VaporMax Gets Another New Look in “Copper”",button : "Read  more",urls:"https://sneakernews.com/2017/05/19/nike-vapormax-copper-black-white/"),
+            sneakernews(img :UIImage(named: "news4")!,title : "The Nike Kyrie 3 “Badge of Honor” Is Available Now",button : "Read  more",urls:"https://sneakernews.com/2017/05/19/nike-kyrie-3-badge-of-honor-859466-092/"),
+            sneakernews(img :UIImage(named: "news5")!,title : "The Nike KD 10 “Anniversary” Pays Tribute To Kevin Durant’s Teams Past And Present",button : "Read  more",urls:"https://sneakernews.com/2017/05/19/nike-kd-10-anniversary-release-date/")
         ]
         return freshnews
     }
@@ -51,7 +51,7 @@ override func didReceiveMemoryWarning() {
 
 // MARK: - Table view data source
 override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-    return 1
+    return utilities.freshnews.count
 }
 
 

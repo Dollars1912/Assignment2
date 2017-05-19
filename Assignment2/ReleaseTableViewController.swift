@@ -29,7 +29,11 @@ import AVFoundation
 class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
+
+    @IBAction func refresh(_ sender: Any) {
+        self.tableView.reloadData()
+    }
+//    var isascending = true
     var managedObjectContext: NSManagedObjectContext
     var sneakerList:[NSManagedObject] = []
     var sneakerSearchList:[NSManagedObject] = []
@@ -39,7 +43,7 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
     @IBAction func play(_ sender: AnyObject) {
         player.play()
     }
-    
+
     required init(coder eDecoder: NSCoder) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
@@ -63,17 +67,23 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         }
         tableView.reloadData()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+//        var  refreshControl = UIRefreshControl()
+//        refreshControl.addTarget(self, action: Selector("sortdatabase"), for: UIControlEvents.valueChanged)
+//        refreshControl= refreshControl
         self.searchBar.delegate = self
         
         // read from db
+        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Sneaker")
         do {
             let audioPath = Bundle.main.path(forResource: "song", ofType:"mp3")
             try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-
+            let fec: NSFetchRequest = Sneaker.fetchRequest()
+            let sortDescripor = NSSortDescriptor(key:"date",ascending: true)
+            fec.sortDescriptors = [sortDescripor]
             let result = try self.managedObjectContext.fetch(fetchRequest)
             sneakerList = result
         }catch {
