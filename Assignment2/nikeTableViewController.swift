@@ -69,6 +69,8 @@ class nikeTableViewController: UITableViewController
         sneaker.detail = "It seems like every year we hear a rumor about the Air Jordan 3 “Black Cement” returning with the coveted OG Nike Air branding on the heel in the near future. You can add 2018 to that ongoing tradition as rumors are swirling around the NBA All-Star Weekend playing host to one of the most iconic pairs of the Air Jordan 3 ever. The pair showcased here is a pair that Jordan Brand has used during pop-up displays dating back to 2013 and fits the whole remastered form given the premium black leather, traditional cement Elephant Print and of course, that Nike Air branding on the heel instead of the Jumpman logo that’s replaced the Swoosh in more recent years. It would make sense that the All-Star Weekend festivities would play host to the Jordan 3 Black Cement given the marquee event usually dropping some serious heat. 2018 also marks the 30th anniversary of the legendary creation from Tinker Hatfield. "
         sneakerList.append(sneaker)
         
+        
+        //asdkjasdjkhasljdljasdjahjsdhasjkh
 
 
         // save to db
