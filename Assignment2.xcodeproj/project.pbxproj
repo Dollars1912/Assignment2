@@ -12,6 +12,9 @@
 		181924D51EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181924D31EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift */; };
 		181924D61EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181924D41EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift */; };
 		181924D81ECB2EA300F06A7F /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181924D71ECB2EA300F06A7F /* song.mp3 */; };
+		182CC6F81ECF151D0031AE5D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182CC6F71ECF151D0031AE5D /* MapKit.framework */; };
+		182CC6FA1ECF18AA0031AE5D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC6F91ECF18AA0031AE5D /* MapViewController.swift */; };
+		182CC6FC1ECFD2F40031AE5D /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CC6FB1ECFD2F40031AE5D /* FavoriteTableViewController.swift */; };
 		182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */; };
 		1861DFBA1EC47AB200B309DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861DFB91EC47AB200B309DD /* Default-568h@2x.png */; };
 		18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F171EB431ED0027DE54 /* AppDelegate.swift */; };
@@ -49,6 +52,9 @@
 		181924D31EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		181924D41EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		181924D71ECB2EA300F06A7F /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		182CC6F71ECF151D0031AE5D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		182CC6F91ECF18AA0031AE5D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		182CC6FB1ECFD2F40031AE5D /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SneakerDetailViewController.swift; sourceTree = "<group>"; };
 		1861DFB91EC47AB200B309DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		18DF9F141EB431ED0027DE54 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182CC6F81ECF151D0031AE5D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182CC6F61ECF151D0031AE5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				182CC6F71ECF151D0031AE5D /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		18DF9F0B1EB431ED0027DE54 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +123,7 @@
 				18DF9F2B1EB431EE0027DE54 /* Assignment2Tests */,
 				18DF9F361EB431EE0027DE54 /* Assignment2UITests */,
 				18DF9F151EB431ED0027DE54 /* Products */,
+				182CC6F61ECF151D0031AE5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,9 +146,11 @@
 				181924D71ECB2EA300F06A7F /* song.mp3 */,
 				18DF9F201EB431EE0027DE54 /* LaunchScreen.storyboard */,
 				18DF9F231EB431EE0027DE54 /* Info.plist */,
-				18DF9F451EB434990027DE54 /* ReleaseTableViewController.swift */,
 				18DF9F471EB4356F0027DE54 /* Model.xcdatamodeld */,
+				18DF9F451EB434990027DE54 /* ReleaseTableViewController.swift */,
+				182CC6FB1ECFD2F40031AE5D /* FavoriteTableViewController.swift */,
 				182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */,
+				182CC6F91ECF18AA0031AE5D /* MapViewController.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -224,6 +242,11 @@
 					18DF9F131EB431ED0027DE54 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					18DF9F271EB431EE0027DE54 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -291,10 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182CC6FA1ECF18AA0031AE5D /* MapViewController.swift in Sources */,
 				18DF9F4D1EB436290027DE54 /* Sneaker+CoreDataProperties.swift in Sources */,
 				181924D61EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift in Sources */,
 				182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */,
 				18DF9F4C1EB436290027DE54 /* Sneaker+CoreDataClass.swift in Sources */,
+				182CC6FC1ECFD2F40031AE5D /* FavoriteTableViewController.swift in Sources */,
 				181924CA1EC6D34600F06A7F /* Brand+CoreDataProperties.swift in Sources */,
 				181924D51EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift in Sources */,
 				18DF9F461EB434990027DE54 /* ReleaseTableViewController.swift in Sources */,
