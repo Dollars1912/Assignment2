@@ -13,6 +13,8 @@
 		182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */; };
 		1861DFBA1EC47AB200B309DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861DFB91EC47AB200B309DD /* Default-568h@2x.png */; };
 		189021FB1ECFE0CD00E454A4 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189021FA1ECFE0CD00E454A4 /* FavoriteTableViewController.swift */; };
+		1890220F1ED0857300E454A4 /* Brandnike+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890220D1ED0857300E454A4 /* Brandnike+CoreDataClass.swift */; };
+		189022101ED0857300E454A4 /* Brandnike+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890220E1ED0857300E454A4 /* Brandnike+CoreDataProperties.swift */; };
 		18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F171EB431ED0027DE54 /* AppDelegate.swift */; };
 		18DF9F1D1EB431ED0027DE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1B1EB431ED0027DE54 /* Main.storyboard */; };
 		18DF9F1F1EB431ED0027DE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SneakerDetailViewController.swift; sourceTree = "<group>"; };
 		1861DFB91EC47AB200B309DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		189021FA1ECFE0CD00E454A4 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
+		1890220D1ED0857300E454A4 /* Brandnike+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Brandnike+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1890220E1ED0857300E454A4 /* Brandnike+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Brandnike+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		18DF9F141EB431ED0027DE54 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF9F171EB431ED0027DE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DF9F1C1EB431ED0027DE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 		18DF9F0B1EB431ED0027DE54 = {
 			isa = PBXGroup;
 			children = (
+				1890220D1ED0857300E454A4 /* Brandnike+CoreDataClass.swift */,
+				1890220E1ED0857300E454A4 /* Brandnike+CoreDataProperties.swift */,
 				D2E652021ECE01BF00C6BD8E /* Brandnb+CoreDataClass.swift */,
 				D2E652031ECE01BF00C6BD8E /* Brandnb+CoreDataProperties.swift */,
 				D2E652041ECE01BF00C6BD8E /* Brandvans+CoreDataClass.swift */,
@@ -188,9 +194,9 @@
 				D2317F891ECED8A5004D376E /* newTableViewController.swift */,
 				D2332FDF1ECCC4BB000F159A /* nike.swift */,
 				D2332FDB1ECCC3F3000F159A /* nikeTableViewController.swift */,
+				D2332FD11ECCA52C000F159A /* pumaableViewController.swift */,
 				D2317F871ECED3B9004D376E /* onlineViewController.swift */,
 				D2E652121ECE07C900C6BD8E /* puma.swift */,
-				D2332FD11ECCA52C000F159A /* pumaableViewController.swift */,
 				18DF9F451EB434990027DE54 /* ReleaseTableViewController.swift */,
 				182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */,
 				181924D71ECB2EA300F06A7F /* song.mp3 */,
@@ -361,9 +367,11 @@
 				182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */,
 				189021FB1ECFE0CD00E454A4 /* FavoriteTableViewController.swift in Sources */,
 				18DF9F4C1EB436290027DE54 /* Sneaker+CoreDataClass.swift in Sources */,
+				189022101ED0857300E454A4 /* Brandnike+CoreDataProperties.swift in Sources */,
 				D2E6520B1ECE01BF00C6BD8E /* Brandnb+CoreDataProperties.swift in Sources */,
 				D2E6520F1ECE01BF00C6BD8E /* Brandadidas+CoreDataProperties.swift in Sources */,
 				D2317F8A1ECED8A5004D376E /* newTableViewController.swift in Sources */,
+				1890220F1ED0857300E454A4 /* Brandnike+CoreDataClass.swift in Sources */,
 				D2E652191ECE15BC00C6BD8E /* vans.swift in Sources */,
 				D2E6521D1ECE1C8400C6BD8E /* newscell.swift in Sources */,
 				D2E652111ECE01BF00C6BD8E /* Brandpuma+CoreDataProperties.swift in Sources */,

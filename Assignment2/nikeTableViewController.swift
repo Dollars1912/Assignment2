@@ -19,7 +19,7 @@ class nikeTableViewController: UITableViewController
     override func viewDidLoad() {
         
         // read from db
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Brand")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Brandnike")
         do {
             let result = try self.managedObjectContext.fetch(fetchRequest)
             sneakerList = result
@@ -57,10 +57,6 @@ class nikeTableViewController: UITableViewController
         sneaker.detail = "The Nike Air Max 97 “Silver Bullet” is finally getting a general release in the US on April 13th, but before we all get a shot at the head-turning classic that was once an Italian staple, Nike Sportswear is dressing up a number of their other Air Max retros with the sought after Metallic Silver/Red combination to help ease the pain of missing out on the AM97. First we saw the Air Max 95 “Silver Bullet” featuring the patent leather look repurposed to fit the overall shape of the iconic AM95 and now another European staple will follow suit with the Nike Air Max Plus. The “Silver Bullet” colorway works rather well on the Air Max Plus given the aggressive side panel overlays and breathable mesh upper. The smaller side panel Swoosh even matches the overall size of the Air Max 97’s. We’re not sure when this women’s exclusive Air Max Plus Silver Bullet will be available, but head over to our Release Dates page for an updated look at all of Nike Sportswear’s latest offerings"
         sneakerList.append(sneaker)
         
-
-        
-
-       
         sneaker = Sneaker(context: managedObjectContext)
         sneaker.id = 8
         sneaker.release_date = (formatter.date(from: "2018/01/01") as NSDate?)!

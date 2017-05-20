@@ -14,6 +14,13 @@
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="release_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
+    <entity name="Brandnike" representedClassName=".Brandnike" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="release_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
     <entity name="Brandpuma" representedClassName=".Brandpuma" syncable="YES">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -47,5 +54,6 @@
         <element name="Brandvans" positionX="63" positionY="144" width="128" height="120"/>
         <element name="Favorite" positionX="-2" positionY="189" width="128" height="90"/>
         <element name="Sneaker" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Brandnike" positionX="9" positionY="117" width="128" height="120"/>
     </elements>
 </model>
