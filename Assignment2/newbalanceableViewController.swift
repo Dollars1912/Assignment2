@@ -16,15 +16,13 @@ class newbalanceTableViewController: UITableViewController
     var managedObjectContext: NSManagedObjectContext
     var sneakerList:[NSManagedObject] = []
     var sneakerSearchList:[NSManagedObject] = []
-    //    var imgs = [UIImage(named:"")]
     required init(coder eDecoder: NSCoder) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        
         managedObjectContext = (appDelegate?.persistentContainer.viewContext)!
         super.init(coder: eDecoder)!
     }
+    
     override func viewDidLoad() {
-        
         // read from db
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Brandnb")
         do {
@@ -35,9 +33,8 @@ class newbalanceTableViewController: UITableViewController
             print(fetchError)
         }
         loadFromDatabase()
-        
-        
     }
+    
     func loadFromDatabase() {
         if (sneakerList.count > 0) {
             return
@@ -53,7 +50,6 @@ class newbalanceTableViewController: UITableViewController
         sneaker.detail = "New Balance present the MRL420 ‘Premium Re- Engineered’ pack, with three styles that offer a nostalgic nod to classic running shoes from the ‘70s. These sleek sneakers are cut with leather uppers and a REVlite midsole, which provides premium responsiveness and durability at a 30% lighter weight than other foams with comparable performance. They come decorated with perforations and embossed branding throughout."
         sneakerList.append(sneaker)
         
-        
         // save to db
         do {
             try self.managedObjectContext.save()
@@ -61,7 +57,6 @@ class newbalanceTableViewController: UITableViewController
             print("Could not save: \(error)")
         }
     }
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return sneakerList.count
@@ -80,7 +75,5 @@ class newbalanceTableViewController: UITableViewController
         let imageName = "\(sneaker.id)"
         cell.nbimage?.image = UIImage(named:"\(imageName)")
         return cell
-        
-        
-}
+    }
 }

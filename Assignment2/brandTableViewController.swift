@@ -34,6 +34,4 @@ class  brandTableViewController: UITableViewController {
         let viewController = storyboard?.instantiateViewController(withIdentifier: vcname)
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
-    
-    
 }

@@ -22,7 +22,7 @@ class mapViewController: UIViewController{
         let pin1 = PinAnnotation(title: "S.K NEW YORK", subtitle: "Opening hour: 9:00 ~ 21:00", coordinate: location1)
         let pin2 = PinAnnotation(title: "S.K MELBOURNE", subtitle: "Opening hour: 9:00 ~ 18:00", coordinate: location2)
         let pin3 = PinAnnotation(title: "S.K BURWOOD", subtitle: "Opening hour: 9:00 ~ 17:00", coordinate: location3)
-        storeMap.setRegion(MKCoordinateRegionMakeWithDistance(location2, 1500, 1500), animated: true)
+        storeMap.setRegion(MKCoordinateRegionMakeWithDistance(location2, 39000, 39000), animated: true)
         storeMap.addAnnotation(pin1)
         storeMap.addAnnotation(pin2)
         storeMap.addAnnotation(pin3)

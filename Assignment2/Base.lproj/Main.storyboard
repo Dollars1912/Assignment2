@@ -67,10 +67,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="RELEASES" id="Clf-RT-cWC">
                         <barButtonItem key="leftBarButtonItem" image="music" style="plain" id="CNh-JC-QjI">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ksB-og-NSR">
+                            <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ksB-og-NSR">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="musicButton" image="music">
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -78,6 +79,7 @@
                                     <action selector="play:" destination="Pbc-yx-B2E" eventType="touchUpInside" id="aO7-pi-y76"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" tag="1" style="plain" systemItem="refresh" id="Ow9-CT-EoA">
                             <connections>
@@ -93,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="1176.8" y="8.5457271364317844"/>
         </scene>
-        <!--Brand-->
+        <!--BRAND-->
         <scene sceneID="FEc-C1-NYv">
             <objects>
                 <tableViewController id="Cwo-cc-uGC" customClass="brandTableViewController" customModule="Assignment2" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,7 +118,7 @@
                             <outlet property="delegate" destination="Cwo-cc-uGC" id="wS0-S9-w8L"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Brand" id="fnj-jx-wkT"/>
+                    <navigationItem key="navigationItem" title="BRAND" id="fnj-jx-wkT"/>
                     <connections>
                         <segue destination="ySm-0D-GeS" kind="show" id="2hZ-dH-9u9"/>
                         <segue destination="Fr1-nj-sSB" kind="show" id="SaK-vK-YUz"/>
@@ -127,7 +129,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHG-6M-CjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341.60000000000002" y="1505.3973013493255"/>
+            <point key="canvasLocation" x="342" y="1483"/>
         </scene>
         <!--Sneaker Detail View Controller-->
         <scene sceneID="4rw-Q5-Wf8">
@@ -188,7 +190,7 @@
             </objects>
             <point key="canvasLocation" x="1997.5999999999999" y="8.5457271364317844"/>
         </scene>
-        <!--Sneaker News-->
+        <!--SNEAKER NEWS-->
         <scene sceneID="msB-V4-aXo">
             <objects>
                 <tableViewController id="2G9-4O-Yjq" customClass="newTableViewController" customModule="Assignment2" sceneMemberID="viewController">
@@ -255,7 +257,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Sneaker News" id="qsC-LI-1hG"/>
+                    <navigationItem key="navigationItem" title="SNEAKER NEWS" id="qsC-LI-1hG"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDn-PF-GEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,7 +281,7 @@
             </objects>
             <point key="canvasLocation" x="2098" y="761"/>
         </scene>
-        <!--Online Shopping-->
+        <!--ONLINE SHOPPING-->
         <scene sceneID="ERU-3x-8vi">
             <objects>
                 <viewController id="sYW-el-Tmb" customClass="newsViewController" customModule="Assignment2" sceneMemberID="viewController">
@@ -304,7 +306,7 @@
                             <constraint firstItem="a9g-Ij-JMK" firstAttribute="leading" secondItem="i0k-BW-V59" secondAttribute="leading" id="gHa-xQ-sxc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Online Shopping" id="7kT-Z7-qYx"/>
+                    <navigationItem key="navigationItem" title="ONLINE SHOPPING" id="7kT-Z7-qYx"/>
                     <connections>
                         <outlet property="webnews" destination="a9g-Ij-JMK" id="z2X-3u-jIV"/>
                     </connections>
@@ -362,8 +364,8 @@
                         <segue destination="lBz-mt-7oP" kind="relationship" relationship="viewControllers" id="Wae-4e-pd4"/>
                         <segue destination="VZy-gi-VmN" kind="relationship" relationship="viewControllers" id="E2I-vQ-5fm"/>
                         <segue destination="QXT-kQ-xnJ" kind="relationship" relationship="viewControllers" id="YoZ-LR-ugS"/>
-                        <segue destination="OIR-5B-7T6" kind="relationship" relationship="viewControllers" id="Hlh-kr-OXm"/>
                         <segue destination="O8i-LZ-0sW" kind="relationship" relationship="viewControllers" id="bRr-CT-1kq"/>
+                        <segue destination="OIR-5B-7T6" kind="relationship" relationship="viewControllers" id="Hlh-kr-OXm"/>
                         <segue destination="82Y-MJ-XKd" kind="relationship" relationship="viewControllers" id="1K6-u4-708"/>
                     </connections>
                 </tabBarController>
@@ -371,7 +373,7 @@
             </objects>
             <point key="canvasLocation" x="-468" y="9.4452773613193415"/>
         </scene>
-        <!--Map View Controller-->
+        <!--STORE LOCATOR-->
         <scene sceneID="XaZ-dI-TEk">
             <objects>
                 <viewController id="GFb-B3-Csl" customClass="mapViewController" customModule="Assignment2" customModuleProvider="target" sceneMemberID="viewController">
@@ -390,7 +392,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Grs-wn-xpx"/>
+                    <navigationItem key="navigationItem" title="STORE LOCATOR" id="Grs-wn-xpx"/>
                     <connections>
                         <outlet property="storeMap" destination="cXA-h4-a5w" id="4Wi-Mu-mji"/>
                     </connections>
@@ -399,7 +401,7 @@
             </objects>
             <point key="canvasLocation" x="-1383.2" y="1482.9085457271365"/>
         </scene>
-        <!--Favorites-->
+        <!--FAVORITE-->
         <scene sceneID="J9T-1Z-D8F">
             <objects>
                 <tableViewController id="99G-B0-eGn" customClass="FavoriteTableViewController" customModule="Assignment2" customModuleProvider="target" sceneMemberID="viewController">
@@ -438,7 +440,7 @@
                             <outlet property="delegate" destination="99G-B0-eGn" id="Dkf-15-hZG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favorites" id="WU1-y6-V97"/>
+                    <navigationItem key="navigationItem" title="FAVORITE" id="WU1-y6-V97"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHO-Bd-jOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

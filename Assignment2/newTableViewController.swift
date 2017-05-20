@@ -39,17 +39,15 @@ class  utilities {
 class newTableViewController: UITableViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
-           utilities.loadnews()
+        utilities.loadnews()
     self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     
 }
 
 override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
 }
 
-// MARK: - Table view data source
 override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
     return utilities.freshnews.count
 }
@@ -65,46 +63,14 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
     cell.newsimage.image = utilities.freshnews[indexPath.row].newssimage
     cell.newstitle?.text = "\(utilities.freshnews[indexPath.row].newstitle)"
     cell.readmore?.text = "\(utilities.freshnews[indexPath.row].newsbutton)"
-
- 
-
     return cell
-    
-    
 }
 
-
-
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    let website = utilities.freshnews[indexPath.row].newsurls
-//   performSegue(withIdentifier:"webbrows" , sender:website)
     let urlString = utilities.freshnews[indexPath.row].newsurls
     if let url = URL(string: urlString)
     {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
-    
+    }
 }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//     if segue.identifier == "webbrows"{
-//        (segue.destination as! newsViewController.Sneakernews) = (sender as! sneaker )
-//        
-//        
-//        
-}
-
-//
-//
-//        var valueToPass = utilities.loadnews()
-//        var urlToPass = valueToPass[].newsurls
-//        if segue.identifier == "" {
-//            let destination: newsViewController = segue.destination as! newsViewController
-//            if let cell = sender as? UITableViewCell {
-//                let indexPath = tableView.indexPath(for: cell)
-//                let news:  = sneakerList[indexPath!.row] as! Sneaker
-//               
-//            }
-//        }
-//    }
-
-

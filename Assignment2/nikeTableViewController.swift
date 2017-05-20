@@ -8,16 +8,13 @@ class nikeTableViewController: UITableViewController
     var managedObjectContext: NSManagedObjectContext
     var sneakerList:[NSManagedObject] = []
     var sneakerSearchList:[NSManagedObject] = []
-//    var imgs = [UIImage(named:"1"),UIImage(named:"5"),UIImage(named:"8")]
-//    var 
     required init(coder eDecoder: NSCoder) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        
         managedObjectContext = (appDelegate?.persistentContainer.viewContext)!
         super.init(coder: eDecoder)!
     }
+    
     override func viewDidLoad() {
-        
         // read from db
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Brandnike")
         do {
@@ -28,9 +25,8 @@ class nikeTableViewController: UITableViewController
             print(fetchError)
         }
         loadFromDatabase()
-        
-        
     }
+    
     func loadFromDatabase() {
         if (sneakerList.count > 0) {
             return
@@ -44,11 +40,7 @@ class nikeTableViewController: UITableViewController
         sneaker.name = "NIKE AIR X SUPREME: SUPTEMPO"
         sneaker.detail = "Supreme and \nNike are collaborating for the Air More Uptempo shoe, nicknamed the “Suptempo.”  \nThe Air More Uptempo was originally released in 1996 and is know for the word “AIR” in large letters on the shoe. Supreme's version includes the\n letters “SUP” in place of “AIR.” The shoe releases in three colorways of red/white, black, and metallic gold on April 27th, 2017 ($220), and \nreleases again on April 29th, 2017 ($220) via Nike. "
         sneakerList.append(sneaker)
-        
-   
-        
 
-        
         sneaker = Sneaker(context: managedObjectContext)
         sneaker.id = 5
         sneaker.release_date = (formatter.date(from: "2017/04/04") as NSDate?)!
@@ -65,10 +57,6 @@ class nikeTableViewController: UITableViewController
         sneaker.detail = "It seems like every year we hear a rumor about the Air Jordan 3 “Black Cement” returning with the coveted OG Nike Air branding on the heel in the near future. You can add 2018 to that ongoing tradition as rumors are swirling around the NBA All-Star Weekend playing host to one of the most iconic pairs of the Air Jordan 3 ever. The pair showcased here is a pair that Jordan Brand has used during pop-up displays dating back to 2013 and fits the whole remastered form given the premium black leather, traditional cement Elephant Print and of course, that Nike Air branding on the heel instead of the Jumpman logo that’s replaced the Swoosh in more recent years. It would make sense that the All-Star Weekend festivities would play host to the Jordan 3 Black Cement given the marquee event usually dropping some serious heat. 2018 also marks the 30th anniversary of the legendary creation from Tinker Hatfield. "
         sneakerList.append(sneaker)
         
-        
-        //asdkjasdjkhasljdljasdjahjsdhasjkh
-
-
         // save to db
         do {
             try self.managedObjectContext.save()
@@ -76,7 +64,6 @@ class nikeTableViewController: UITableViewController
             print("Could not save: \(error)")
         }
     }
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return sneakerList.count
@@ -95,9 +82,8 @@ class nikeTableViewController: UITableViewController
         let imageName = "\(sneaker.id)"
         cell.nikeimage?.image = UIImage(named:"\(imageName)")
         return cell
- 
-        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSneakerDetail" {
             let destination: SneakerDetailViewController = segue.destination as! SneakerDetailViewController
@@ -108,6 +94,4 @@ class nikeTableViewController: UITableViewController
             }
         }
     }
-
-    
 }

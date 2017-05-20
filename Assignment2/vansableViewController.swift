@@ -12,19 +12,16 @@ import CoreData
 
 class vansTableViewController: UITableViewController
 {
-    
     var managedObjectContext: NSManagedObjectContext
     var sneakerList:[NSManagedObject] = []
     var sneakerSearchList:[NSManagedObject] = []
-    
     required init(coder eDecoder: NSCoder) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        
         managedObjectContext = (appDelegate?.persistentContainer.viewContext)!
         super.init(coder: eDecoder)!
     }
+    
     override func viewDidLoad() {
-        
         // read from db
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Brandvans")
         do {
@@ -35,9 +32,8 @@ class vansTableViewController: UITableViewController
             print(fetchError)
         }
         loadFromDatabase()
-        
-        
     }
+    
     func loadFromDatabase() {
         if (sneakerList.count > 0) {
             return
@@ -53,7 +49,6 @@ class vansTableViewController: UITableViewController
         sneaker.detail = "Southern California’s own BLENDS continues to revamp some of your favorite archival Vans models with their signature ‘Bones’ side panel stripe and premium black leather and now the boutique is back to celebrate the 67th anniversary of Snoopy, Charlie Brown, and the entire Peanuts gang with an upcoming Vans Sk8-Hi Zip slated to release on Saturday, May 13th. The luxurious reissued take on the classic skate silhouette benefits from premium black leather throughout, an updated zipper backing, and an updated ‘Bones’ detail that features Snoopy’s signature lazy contemplative position atop his dog house. Woodstock even gets a subtle feature on the medial side for a nice added touch. Check out more detailed shots below and we’ll let you know where you can grab this pair besides BLENDS later in the week"
         sneakerList.append(sneaker)
         
-        
         // save to db
         do {
             try self.managedObjectContext.save()
@@ -61,8 +56,6 @@ class vansTableViewController: UITableViewController
             print("Could not save: \(error)")
         }
     }
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return sneakerList.count
     }
@@ -80,7 +73,5 @@ class vansTableViewController: UITableViewController
         let imageName = "\(sneaker.id)"
         cell.vansimage?.image = UIImage(named:"\(imageName)")
         return cell
-        
-        
-}
+    }
 }
