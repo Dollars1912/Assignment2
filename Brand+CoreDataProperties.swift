@@ -18,6 +18,7 @@ extension Brand {
 
     @NSManaged public var id: Int32
     @NSManaged public var name: String?
-    @NSManaged public var sneaker: Sneaker?
-
+    @NSManaged public var detail: String
+    @NSManaged public var release_date: NSDate?
+    @NSManaged public var price: Float
 }
