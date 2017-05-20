@@ -17,6 +17,7 @@
 		189022121ED08B0C00E454A4 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189022111ED08B0C00E454A4 /* song.mp3 */; };
 		189022141ED0913800E454A4 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189022131ED0913800E454A4 /* mapViewController.swift */; };
 		189022171ED0919500E454A4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189022161ED0919500E454A4 /* MapKit.framework */; };
+		189022191ED0944D00E454A4 /* pinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189022181ED0944D00E454A4 /* pinAnnotation.swift */; };
 		18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F171EB431ED0027DE54 /* AppDelegate.swift */; };
 		18DF9F1D1EB431ED0027DE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1B1EB431ED0027DE54 /* Main.storyboard */; };
 		18DF9F1F1EB431ED0027DE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		189022111ED08B0C00E454A4 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		189022131ED0913800E454A4 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		189022161ED0919500E454A4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		189022181ED0944D00E454A4 /* pinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinAnnotation.swift; sourceTree = "<group>"; };
 		18DF9F141EB431ED0027DE54 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF9F171EB431ED0027DE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DF9F1C1EB431ED0027DE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				18DF9F1B1EB431ED0027DE54 /* Main.storyboard */,
 				18DF9F471EB4356F0027DE54 /* Model.xcdatamodeld */,
 				189022131ED0913800E454A4 /* mapViewController.swift */,
+				189022181ED0944D00E454A4 /* pinAnnotation.swift */,
 				D2E652161ECE15B100C6BD8E /* NB.swift */,
 				D2332FD31ECCA541000F159A /* newbalanceableViewController.swift */,
 				D2E6521C1ECE1C8400C6BD8E /* newscell.swift */,
@@ -393,6 +396,7 @@
 				D2E6520F1ECE01BF00C6BD8E /* Brandadidas+CoreDataProperties.swift in Sources */,
 				D2317F8A1ECED8A5004D376E /* newTableViewController.swift in Sources */,
 				1890220F1ED0857300E454A4 /* Brandnike+CoreDataClass.swift in Sources */,
+				189022191ED0944D00E454A4 /* pinAnnotation.swift in Sources */,
 				D2E652191ECE15BC00C6BD8E /* vans.swift in Sources */,
 				D2E6521D1ECE1C8400C6BD8E /* newscell.swift in Sources */,
 				D2E652111ECE01BF00C6BD8E /* Brandpuma+CoreDataProperties.swift in Sources */,

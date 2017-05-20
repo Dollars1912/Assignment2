@@ -9,30 +9,26 @@
 import UIKit
 import MapKit
 
-class mapViewController: UIViewController {
+class mapViewController: UIViewController{
 
     @IBOutlet weak var storeMap: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let location1 = CLLocationCoordinate2DMake(40.741895, -73.989308)
+        let location2 = CLLocationCoordinate2DMake(-37.8104277, 144.96291529999996)
+        let location3 = CLLocationCoordinate2DMake(-37.8463802, 145.11388699999998)
+        let pin1 = PinAnnotation(title: "S.K NEW YORK", subtitle: "Opening hour: 9:00 ~ 21:00", coordinate: location1)
+        let pin2 = PinAnnotation(title: "S.K MELBOURNE", subtitle: "Opening hour: 9:00 ~ 18:00", coordinate: location2)
+        let pin3 = PinAnnotation(title: "S.K BURWOOD", subtitle: "Opening hour: 9:00 ~ 17:00", coordinate: location3)
+        storeMap.setRegion(MKCoordinateRegionMakeWithDistance(location2, 1500, 1500), animated: true)
+        storeMap.addAnnotation(pin1)
+        storeMap.addAnnotation(pin2)
+        storeMap.addAnnotation(pin3)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
