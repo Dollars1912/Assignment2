@@ -11,21 +11,6 @@ import Foundation
 import CoreData
 import AVFoundation
 
-//extension UIImage{
-//    class func sacleImageToSize(img: UIImage, size: CGSize) -> UIImage{
-//        UIGraphicsBeginImageContext(size)
-//        
-//        img.drawInRect( CGRect(origin: CGPointZero, size: size))
-//        
-//        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-//        
-//        UIGraphicsEndImageContext()
-//        
-//        return scaledImage!
-//    }
-//}
-
-
 class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -33,7 +18,6 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
     @IBAction func refresh(_ sender: Any) {
         self.tableView.reloadData()
     }
-//    var isascending = true
     var managedObjectContext: NSManagedObjectContext
     var sneakerList:[NSManagedObject] = []
     var sneakerSearchList:[NSManagedObject] = []
@@ -70,13 +54,9 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        var  refreshControl = UIRefreshControl()
-//        refreshControl.addTarget(self, action: Selector("sortdatabase"), for: UIControlEvents.valueChanged)
-//        refreshControl= refreshControl
         self.searchBar.delegate = self
         
         // read from db
-        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Sneaker")
         do {
             let audioPath = Bundle.main.path(forResource: "song", ofType:"mp3")
@@ -90,11 +70,11 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
             let fetchError = error as NSError
             print(fetchError)
         }
-        loadFromDatabase()
+        insetInitialDataToDatabase()
 
     }
     
-    func loadFromDatabase() {
+    func insetInitialDataToDatabase() {
         if (sneakerList.count > 0) {
             return
         }
@@ -108,14 +88,13 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         sneaker.detail = "Supreme and \nNike are collaborating for the Air More Uptempo shoe, nicknamed the “Suptempo.”  \nThe Air More Uptempo was originally released in 1996 and is know for the word “AIR” in large letters on the shoe. Supreme's version includes the\n letters “SUP” in place of “AIR.” The shoe releases in three colorways of red/white, black, and metallic gold on April 27th, 2017 ($220), and \nreleases again on April 29th, 2017 ($220) via Nike. "
         sneakerList.append(sneaker)
         
-        
         sneaker = Sneaker(context: managedObjectContext)
         sneaker.id = 2
         sneaker.release_date = (formatter.date(from: "2016/12/08") as NSDate?)!
         sneaker.price = 120.0
         sneaker.name = "NMD XR1 MMJ :Mastermind"
         sneaker.detail = "How can adidas get people even more hyped on the NMD? Add some collaborations into the mix and keep their distribution limited to its top tier of Consortium retailers. That's the plan with this pair, the Mastermind x adidas NMD XR1. The shoe's design doesn't mess with the traditional Mastermind formula, using a no-frills black and white colorway and tossing in the Japanese brand's logos on the support cage.Also on the way from Mastermind is a collab take on the Tubular Instinct, a shoe that's no doubt less anticipated than its NMD."
-          sneakerList.append(sneaker)
+        sneakerList.append(sneaker)
     
         sneaker = Sneaker(context: managedObjectContext)
         sneaker.id = 3
@@ -188,11 +167,6 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true;
     }
@@ -202,26 +176,10 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
             self.onFavoriteButtonClicked(Index: index.row)
         }
         favorite.backgroundColor = .orange
-        
-        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-            self.onDeleteButtonClicked(Index: index.row)
-            
-        }
-        delete.backgroundColor = .red
-        return [delete, favorite]
-    }
-    
-    func onDeleteButtonClicked(Index index: Int) {
-        print("delete button tapped \(index)")
-        var sneakers = sneakerList[index]
-        if isSearching {
-            sneakers = sneakerSearchList[index]
-        }
-        // TODO delete
+        return [favorite]
     }
     
     func onFavoriteButtonClicked(Index index: Int) {
-        print("favourite button tapped \(index)")
         var sneaker = sneakerList[index]
         if isSearching {
             sneaker = sneakerSearchList[index]
@@ -237,8 +195,6 @@ class ReleaseTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

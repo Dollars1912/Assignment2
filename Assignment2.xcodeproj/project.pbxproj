@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		181924C91EC6D34600F06A7F /* Brand+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181924C71EC6D34600F06A7F /* Brand+CoreDataClass.swift */; };
-		181924CA1EC6D34600F06A7F /* Brand+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181924C81EC6D34600F06A7F /* Brand+CoreDataProperties.swift */; };
 		181924D51EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181924D31EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift */; };
 		181924D61EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181924D41EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift */; };
 		181924D81ECB2EA300F06A7F /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 181924D71ECB2EA300F06A7F /* song.mp3 */; };
 		182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */; };
 		1861DFBA1EC47AB200B309DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861DFB91EC47AB200B309DD /* Default-568h@2x.png */; };
+		189021FB1ECFE0CD00E454A4 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189021FA1ECFE0CD00E454A4 /* FavoriteTableViewController.swift */; };
 		18DF9F181EB431ED0027DE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF9F171EB431ED0027DE54 /* AppDelegate.swift */; };
 		18DF9F1D1EB431ED0027DE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1B1EB431ED0027DE54 /* Main.storyboard */; };
 		18DF9F1F1EB431ED0027DE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */; };
@@ -66,13 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		181924C71EC6D34600F06A7F /* Brand+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Brand+CoreDataClass.swift"; sourceTree = "<group>"; };
-		181924C81EC6D34600F06A7F /* Brand+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Brand+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		181924D31EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
 		181924D41EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		181924D71ECB2EA300F06A7F /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SneakerDetailViewController.swift; sourceTree = "<group>"; };
 		1861DFB91EC47AB200B309DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		189021FA1ECFE0CD00E454A4 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		18DF9F141EB431ED0027DE54 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF9F171EB431ED0027DE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DF9F1C1EB431ED0027DE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,8 +149,6 @@
 				D2E652091ECE01BF00C6BD8E /* Brandpuma+CoreDataProperties.swift */,
 				181924D31EC6DC5B00F06A7F /* Favorite+CoreDataClass.swift */,
 				181924D41EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift */,
-				181924C71EC6D34600F06A7F /* Brand+CoreDataClass.swift */,
-				181924C81EC6D34600F06A7F /* Brand+CoreDataProperties.swift */,
 				1861DFB91EC47AB200B309DD /* Default-568h@2x.png */,
 				18DF9F4A1EB436290027DE54 /* Sneaker+CoreDataClass.swift */,
 				18DF9F4B1EB436290027DE54 /* Sneaker+CoreDataProperties.swift */,
@@ -176,29 +172,30 @@
 		18DF9F161EB431ED0027DE54 /* Assignment2 */ = {
 			isa = PBXGroup;
 			children = (
-				18DF9F171EB431ED0027DE54 /* AppDelegate.swift */,
-				18DF9F1B1EB431ED0027DE54 /* Main.storyboard */,
-				18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */,
-				181924D71ECB2EA300F06A7F /* song.mp3 */,
-				18DF9F201EB431EE0027DE54 /* LaunchScreen.storyboard */,
-				18DF9F231EB431EE0027DE54 /* Info.plist */,
-				18DF9F451EB434990027DE54 /* ReleaseTableViewController.swift */,
-				18DF9F471EB4356F0027DE54 /* Model.xcdatamodeld */,
-				182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */,
-				D2332FCD1ECCA4B2000F159A /* brandTableViewController.swift */,
-				D2332FD11ECCA52C000F159A /* pumaableViewController.swift */,
-				D2332FD31ECCA541000F159A /* newbalanceableViewController.swift */,
-				D2332FD51ECCA562000F159A /* adidasTableViewController.swift */,
-				D2332FD71ECCA572000F159A /* vansableViewController.swift */,
-				D2332FDB1ECCC3F3000F159A /* nikeTableViewController.swift */,
-				D2332FDF1ECCC4BB000F159A /* nike.swift */,
-				D2E652121ECE07C900C6BD8E /* puma.swift */,
 				D2E652141ECE15A400C6BD8E /* adidas.swift */,
+				D2332FD51ECCA562000F159A /* adidasTableViewController.swift */,
+				18DF9F171EB431ED0027DE54 /* AppDelegate.swift */,
+				18DF9F1E1EB431ED0027DE54 /* Assets.xcassets */,
+				D2332FCD1ECCA4B2000F159A /* brandTableViewController.swift */,
+				189021FA1ECFE0CD00E454A4 /* FavoriteTableViewController.swift */,
+				18DF9F231EB431EE0027DE54 /* Info.plist */,
+				18DF9F201EB431EE0027DE54 /* LaunchScreen.storyboard */,
+				18DF9F1B1EB431ED0027DE54 /* Main.storyboard */,
+				18DF9F471EB4356F0027DE54 /* Model.xcdatamodeld */,
 				D2E652161ECE15B100C6BD8E /* NB.swift */,
-				D2E652181ECE15BC00C6BD8E /* vans.swift */,
+				D2332FD31ECCA541000F159A /* newbalanceableViewController.swift */,
 				D2E6521C1ECE1C8400C6BD8E /* newscell.swift */,
-				D2317F871ECED3B9004D376E /* onlineViewController.swift */,
 				D2317F891ECED8A5004D376E /* newTableViewController.swift */,
+				D2332FDF1ECCC4BB000F159A /* nike.swift */,
+				D2332FDB1ECCC3F3000F159A /* nikeTableViewController.swift */,
+				D2317F871ECED3B9004D376E /* onlineViewController.swift */,
+				D2E652121ECE07C900C6BD8E /* puma.swift */,
+				D2332FD11ECCA52C000F159A /* pumaableViewController.swift */,
+				18DF9F451EB434990027DE54 /* ReleaseTableViewController.swift */,
+				182FCF021EBD65510012D068 /* SneakerDetailViewController.swift */,
+				181924D71ECB2EA300F06A7F /* song.mp3 */,
+				D2E652181ECE15BC00C6BD8E /* vans.swift */,
+				D2332FD71ECCA572000F159A /* vansableViewController.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -362,12 +359,12 @@
 				181924D61EC6DC5B00F06A7F /* Favorite+CoreDataProperties.swift in Sources */,
 				D2332FD81ECCA572000F159A /* vansableViewController.swift in Sources */,
 				182FCF031EBD65510012D068 /* SneakerDetailViewController.swift in Sources */,
+				189021FB1ECFE0CD00E454A4 /* FavoriteTableViewController.swift in Sources */,
 				18DF9F4C1EB436290027DE54 /* Sneaker+CoreDataClass.swift in Sources */,
 				D2E6520B1ECE01BF00C6BD8E /* Brandnb+CoreDataProperties.swift in Sources */,
 				D2E6520F1ECE01BF00C6BD8E /* Brandadidas+CoreDataProperties.swift in Sources */,
 				D2317F8A1ECED8A5004D376E /* newTableViewController.swift in Sources */,
 				D2E652191ECE15BC00C6BD8E /* vans.swift in Sources */,
-				181924CA1EC6D34600F06A7F /* Brand+CoreDataProperties.swift in Sources */,
 				D2E6521D1ECE1C8400C6BD8E /* newscell.swift in Sources */,
 				D2E652111ECE01BF00C6BD8E /* Brandpuma+CoreDataProperties.swift in Sources */,
 				D2332FCE1ECCA4B2000F159A /* brandTableViewController.swift in Sources */,
@@ -380,7 +377,6 @@
 				D2E652101ECE01BF00C6BD8E /* Brandpuma+CoreDataClass.swift in Sources */,
 				D2E6520D1ECE01BF00C6BD8E /* Brandvans+CoreDataProperties.swift in Sources */,
 				D2E652151ECE15A400C6BD8E /* adidas.swift in Sources */,
-				181924C91EC6D34600F06A7F /* Brand+CoreDataClass.swift in Sources */,
 				D2332FE01ECCC4BB000F159A /* nike.swift in Sources */,
 				D2332FD61ECCA562000F159A /* adidasTableViewController.swift in Sources */,
 				D2E6520E1ECE01BF00C6BD8E /* Brandadidas+CoreDataClass.swift in Sources */,
